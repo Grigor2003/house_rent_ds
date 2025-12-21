@@ -1,0 +1,25 @@
+[ 2025-12-21 22:34:31,898 ] 26 root - INFO - Running data ingestion component
+[ 2025-12-21 22:34:31,910 ] 29 root - INFO - Original dataset size: 4746
+[ 2025-12-21 22:34:31,914 ] 41 root - INFO - After 5-95 percentile filter (Rent 9000 - 40000): 2936 rows
+[ 2025-12-21 22:34:31,916 ] 50 root - INFO - Read dataset successfully
+[ 2025-12-21 22:34:31,928 ] 54 root - INFO - Raw data saved
+[ 2025-12-21 22:34:31,941 ] 60 root - INFO - Data Ingestion completed
+[ 2025-12-21 22:34:31,950 ] 173 root - INFO - Data Read successfully
+[ 2025-12-21 22:34:31,966 ] 179 root - INFO - Obtaining preprocessing object
+[ 2025-12-21 22:34:31,968 ] 191 root - INFO - Creating new Features
+[ 2025-12-21 22:34:31,968 ] 57 root - INFO - Adding new features
+[ 2025-12-21 22:34:31,975 ] 69 root - INFO - New features added
+[ 2025-12-21 22:34:31,975 ] 57 root - INFO - Adding new features
+[ 2025-12-21 22:34:31,978 ] 69 root - INFO - New features added
+[ 2025-12-21 22:34:31,979 ] 195 root - INFO - Applying preprocessing object on training and test set
+[ 2025-12-21 22:34:32,002 ] 199 root - INFO - Saving preprocessing object
+[ 2025-12-21 22:34:32,049 ] 204 root - INFO - OneHot groups: {'City': {'start': 5, 'size': 6}, 'Furnishing Status': {'start': 11, 'size': 3}, 'Tenant Preferred': {'start': 14, 'size': 3}, 'day of week posted': {'start': 17, 'size': 7}, 'quarter posted': {'start': 24, 'size': 2}}
+[ 2025-12-21 22:34:32,050 ] 251 root - INFO - Combining: ['City', 'quarter posted'], sizes=[6, 2], indices=[5, 6, 7, 8, 9, 10, 24, 25], keep_originals=False
+[ 2025-12-21 22:34:32,051 ] 280 root - INFO - After combining ['City', 'quarter posted']: shape=(2348, 30), remaining groups: ['Furnishing Status', 'Tenant Preferred', 'day of week posted'], keep_originals=False
+[ 2025-12-21 22:34:32,051 ] 251 root - INFO - Combining: ['Tenant Preferred', 'Furnishing Status'], sizes=[3, 3], indices=[8, 9, 10, 5, 6, 7], keep_originals=False
+[ 2025-12-21 22:34:32,052 ] 280 root - INFO - After combining ['Tenant Preferred', 'Furnishing Status']: shape=(2348, 33), remaining groups: ['day of week posted'], keep_originals=False
+[ 2025-12-21 22:34:32,052 ] 293 root - INFO - Dropped first column of each group ['day of week posted', 'City x quarter posted', 'Tenant Preferred x Furnishing Status'] to avoid dummy variable trap. New shape: (2348, 30)
+[ 2025-12-21 22:34:32,052 ] 336 root - INFO - Generated 30 feature names
+[ 2025-12-21 22:34:32,099 ] 364 root - INFO - Saved preprocessing objects. Combiners count: 2
+[ 2025-12-21 22:34:32,099 ] 26 root - INFO - Splitting train and test array
+[ 2025-12-21 22:34:32,122 ] 49 root - INFO - Model trained successfully

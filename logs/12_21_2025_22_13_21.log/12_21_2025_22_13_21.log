@@ -1,0 +1,14 @@
+[ 2025-12-21 22:13:23,892 ] 26 root - INFO - Running data ingestion component
+[ 2025-12-21 22:13:23,909 ] 29 root - INFO - Original dataset size: 4746
+[ 2025-12-21 22:13:23,915 ] 41 root - INFO - After 5-95 percentile filter (Rent 9000 - 40000): 2936 rows
+[ 2025-12-21 22:13:23,916 ] 50 root - INFO - Read dataset successfully
+[ 2025-12-21 22:13:23,930 ] 54 root - INFO - Raw data saved
+[ 2025-12-21 22:13:23,943 ] 60 root - INFO - Data Ingestion completed
+[ 2025-12-21 22:13:23,952 ] 174 root - INFO - Data Read successfully
+[ 2025-12-21 22:13:23,965 ] 180 root - INFO - Obtaining preprocessing object
+[ 2025-12-21 22:13:23,970 ] 192 root - INFO - Creating new Features
+[ 2025-12-21 22:13:23,970 ] 58 root - INFO - Adding new features
+[ 2025-12-21 22:13:23,976 ] 70 root - INFO - New features added
+[ 2025-12-21 22:13:23,976 ] 58 root - INFO - Adding new features
+[ 2025-12-21 22:13:23,980 ] 70 root - INFO - New features added
+[ 2025-12-21 22:13:23,981 ] 196 root - INFO - Applying preprocessing object on training and test set
