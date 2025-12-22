@@ -1,0 +1,20 @@
+[ 2025-12-22 01:50:37,347 ] 26 root - INFO - Running data ingestion component
+[ 2025-12-22 01:50:37,360 ] 29 root - INFO - Original dataset size: 4746
+[ 2025-12-22 01:50:37,365 ] 50 root - INFO - Read dataset successfully
+[ 2025-12-22 01:50:37,380 ] 54 root - INFO - Raw data saved
+[ 2025-12-22 01:50:37,400 ] 60 root - INFO - Data Ingestion completed
+[ 2025-12-22 01:50:37,414 ] 173 root - INFO - Data Read successfully
+[ 2025-12-22 01:50:37,431 ] 179 root - INFO - Obtaining preprocessing object
+[ 2025-12-22 01:50:37,433 ] 191 root - INFO - Creating new Features
+[ 2025-12-22 01:50:37,433 ] 57 root - INFO - Adding new features
+[ 2025-12-22 01:50:37,451 ] 69 root - INFO - New features added
+[ 2025-12-22 01:50:37,452 ] 57 root - INFO - Adding new features
+[ 2025-12-22 01:50:37,455 ] 69 root - INFO - New features added
+[ 2025-12-22 01:50:37,456 ] 195 root - INFO - Applying preprocessing object on training and test set
+[ 2025-12-22 01:50:37,489 ] 199 root - INFO - Saving preprocessing object
+[ 2025-12-22 01:50:37,561 ] 204 root - INFO - OneHot groups: {'City': {'start': 5, 'size': 6}, 'Furnishing Status': {'start': 11, 'size': 3}, 'Tenant Preferred': {'start': 14, 'size': 3}, 'day of week posted': {'start': 17, 'size': 7}, 'quarter posted': {'start': 24, 'size': 2}}
+[ 2025-12-22 01:50:37,562 ] 293 root - INFO - Dropped first column of each group ['City', 'Furnishing Status', 'Tenant Preferred', 'day of week posted', 'quarter posted'] to avoid dummy variable trap. New shape: (3796, 21)
+[ 2025-12-22 01:50:37,562 ] 336 root - INFO - Generated 21 feature names
+[ 2025-12-22 01:50:37,615 ] 364 root - INFO - Saved preprocessing objects. Combiners count: 0
+[ 2025-12-22 01:50:37,616 ] 26 root - INFO - Splitting train and test array
+[ 2025-12-22 01:50:37,648 ] 49 root - INFO - Model trained successfully
