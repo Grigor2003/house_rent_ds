@@ -99,4 +99,3 @@ plt.show()
 coefs_export = coefs[['Coefficient', 'Std Error', 'CI_Low', 'CI_High', 'p-value', 'Significant']].copy()
 coefs_export.to_csv('artifacts/coefficients_summary.csv')
 print("Saved: artifacts/coefficients_summary.csv")
-
