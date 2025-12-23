@@ -392,5 +392,3 @@ House-Rent-Prediction/
 3. Statsmodels Documentation: https://www.statsmodels.org/
 
 ---
-
-*Document prepared for academic review.*

@@ -84,9 +84,6 @@ print()
 ax.grid(axis='x', alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('artifacts/coef_barplot.png', dpi=150, bbox_inches='tight')
-print("Saved: artifacts/coef_barplot.png")
-
 plt.show()
 
 print("\nInterpretation:")
