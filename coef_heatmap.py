@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.colors import TwoSlopeNorm
 
 # Load coefficients
 coefs = pd.read_csv('artifacts/coefficients.csv', index_col=0)
@@ -85,50 +84,6 @@ print()
 ax.grid(axis='x', alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('artifacts/coef_barplot.png', dpi=150, bbox_inches='tight')
-print("Saved: artifacts/coef_barplot.png")
-
-plt.show()
-
-# Also create a 2D heatmap (single row) with TwoSlopeNorm
-fig2, ax2 = plt.subplots(figsize=(20, 4))
-
-# Sort by coefficient value for heatmap
-coefs_sorted = coefs.sort_values('Coefficient', ascending=False)
-values = coefs_sorted['Coefficient'].values.reshape(1, -1)
-
-vmax = max(abs(values.min()), abs(values.max()))
-im = ax2.imshow(values, cmap='seismic', norm=TwoSlopeNorm(vmin=-vmax, vcenter=0, vmax=vmax), aspect='auto')
-
-# Colorbar with mean lines
-cbar = fig2.colorbar(im, ax=ax2, orientation='horizontal', pad=0.4, shrink=0.6)
-cbar.set_label('Coefficient', fontsize=14)
-cbar.ax.tick_params(labelsize=12)
-
-# Add mean markers on colorbar
-cbar.ax.axvline(x=(pos_mean + vmax) / (2 * vmax), color='darkred', linewidth=2, linestyle='--')
-cbar.ax.axvline(x=(neg_mean + vmax) / (2 * vmax), color='darkblue', linewidth=2, linestyle='--')
-
-# Custom ticks including means
-ticks = sorted(set([-vmax, neg_mean, 0, pos_mean, vmax]))
-cbar.set_ticks(ticks)
-cbar.set_ticklabels([f'{t:.2f}' for t in ticks])
-
-# Labels
-ax2.set_xticks(range(len(coefs_sorted)))
-ax2.set_xticklabels(coefs_sorted.index, rotation=60, ha='right', fontsize=12)
-ax2.set_yticks([])
-ax2.set_title(f'Coefficient Heatmap (Pos mean: {pos_mean:.3f}, Neg mean: {neg_mean:.3f})', fontsize=16, fontweight='bold')
-
-# Add values
-for j, val in enumerate(coefs_sorted['Coefficient']):
-    color = 'white' if abs(val) > 0.3 else 'black'
-    ax2.text(j, 0, f'{val:.2f}', ha='center', va='center', fontsize=11, fontweight='bold', color=color)
-
-plt.tight_layout()
-plt.savefig('artifacts/coef_heatmap.png', dpi=150, bbox_inches='tight')
-print("Saved: artifacts/coef_heatmap.png")
-
 plt.show()
 
 print("\nInterpretation:")

@@ -90,13 +90,9 @@ ax.set_title('Regression Coefficients Summary\n(Log-Linear Model: log(Rent) ~ Fe
              fontsize=16, fontweight='bold', pad=20)
 
 plt.tight_layout()
-plt.savefig('artifacts/coef_table.png', dpi=150, bbox_inches='tight', facecolor='white')
-print("Saved: artifacts/coef_table.png")
-
 plt.show()
 
 # Also save as CSV for easy copy-paste
 coefs_export = coefs[['Coefficient', 'Std Error', 'CI_Low', 'CI_High', 'p-value', 'Significant']].copy()
 coefs_export.to_csv('artifacts/coefficients_summary.csv')
 print("Saved: artifacts/coefficients_summary.csv")
-

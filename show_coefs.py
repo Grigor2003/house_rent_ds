@@ -140,9 +140,9 @@ print('-' * 60)
 for _, row in vif_df.iterrows():
     if pd.isna(row['VIF']) or np.isinf(row['VIF']):
         status = 'N/A'
-    elif row['VIF'] > 10:
+    elif row['VIF'] > 20:
         status = 'HIGH!'
-    elif row['VIF'] > 5:
+    elif row['VIF'] > 10:
         status = 'Moderate'
     else:
         status = 'OK'
